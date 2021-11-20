@@ -50,7 +50,6 @@ namespace _2_BUS_BusinessLayer.Services
         public string DeleteHD(Chitiethoadon chitiethoadon)
         {
             daLchitiethoadon.DeleteCTHD(chitiethoadon);
-
             return "thanh cong";
         }
         public void Save()
@@ -82,12 +81,14 @@ namespace _2_BUS_BusinessLayer.Services
 
         public string DeleteCTHD(Chitiethoadon chitiethoadon)
         {
-            throw new NotImplementedException();
+            _lstChitiethoadons.Remove(chitiethoadon);
+            return " thanh cong";
         }
 
         public string UpdateCTHD(Chitiethoadon chitiethoadon)
         {
-            throw new NotImplementedException();
+            _lstChitiethoadons.Remove(chitiethoadon);
+            return " thanh cong";
         }
 
         string IBUSchitiethoadon.AddCTHDlist(Chitiethoadon chitiethoadon, string maCTHD, string mahoadon, string mactsanpham,

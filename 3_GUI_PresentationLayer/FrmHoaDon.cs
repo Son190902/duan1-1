@@ -109,7 +109,6 @@ namespace _3_GUI_PresentationLayer
         {
             var hoadon = _BUShoadon.getlistHD().Where(c => c.Mahoadon == txt_mahd.Text).FirstOrDefault();
             hoadon.Mahoadon = txt_mahd.Text;
-            hoadon.Mahoadon = txt_mahd.Text;
             hoadon.Makhach = txt_makh.Text;
             hoadon.Manhanvien = txt_manv.Text;
             hoadon.Ngaydathang = Convert.ToDateTime(txt_ngaylaphd.Text);
