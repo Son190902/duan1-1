@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using _1_DAL_DataAccessLayer.Context;
+using _1_DAL_DataAccessLayer.DALServices;
+using _1_DAL_DataAccessLayer.IDALServices;
 using _1_DAL_DataAccessLayer.Models;
 using _2_BUS_BusinessLayer.IServices;
 using _2_BUS_BusinessLayer.Services;
@@ -19,25 +21,26 @@ namespace _3_GUI_PresentationLayer
     {
         
         private IBUShoadon _BUShoadon;
+        IBUShoadon bUShoadon;
         private string idhoadon;
-
+        IDALhoadon dALhoadon;   
         public FrmHoaDon()
         {
             InitializeComponent();
             _BUShoadon = new BUShoadon();
+            dALhoadon = new DALhoadon();
             loadData();
         }
 
         public void loadData()
         {
-            dgrv_dsphieunhap.ColumnCount = 7;
+            dgrv_dsphieunhap.ColumnCount = 6;
             dgrv_dsphieunhap.Columns[0].Name = "ma hoa don";
             dgrv_dsphieunhap.Columns[1].Name = "ma khach";
             dgrv_dsphieunhap.Columns[2].Name = "ma nhan vien";
             dgrv_dsphieunhap.Columns[3].Name = "ngay lap hoa don";
             dgrv_dsphieunhap.Columns[4].Name = "tien dat coc";
-            dgrv_dsphieunhap.Columns[5].Name = "trang thai";
-            dgrv_dsphieunhap.Columns[6].Name = "dia chi";
+            dgrv_dsphieunhap.Columns[5].Name = "trang thai";           
             dgrv_dsphieunhap.Rows.Clear();
             foreach (var x in _BUShoadon.getlistHD()) // 
             {
@@ -64,10 +67,11 @@ namespace _3_GUI_PresentationLayer
 
                 chk_hethang.Checked = true;
             }
-            _BUShoadon.AddHD(hoadon,txt_mahd.Text,txt_makh.Text,txt_manv.Text,txt_ngaylaphd.Text,txt_tiendatcoc.Text,chk_conhang.Checked.ToString()); //truyền vào đúng như cái vừa hiện
-            MessageBox.Show("them thanh cong", "thong bao"); 
-            _BUShoadon.getlistHD();
             
+            _BUShoadon.AddHD(hoadon,txt_mahd.Text,txt_makh.Text,txt_manv.Text,txt_ngaylaphd.Text,txt_tiendatcoc.Text,chk_conhang.Checked.ToString());
+           
+            MessageBox.Show("them thanh cong", "thong bao");           
+            dALhoadon.getlstfromdb();
             loadData();
         }
 
@@ -91,8 +95,7 @@ namespace _3_GUI_PresentationLayer
 
                 chk_conhang.Checked = false;
                 chk_hethang.Checked = true;
-            }
-            txt_diachi.Text = dgrv_dsphieunhap.Rows[i].Cells[6].Value.ToString();
+            }           
             
         }
 
@@ -164,6 +167,11 @@ namespace _3_GUI_PresentationLayer
         }
 
         private void FrmHoaDon_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_ngaylaphd_TextChanged(object sender, EventArgs e)
         {
 
         }

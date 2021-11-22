@@ -104,7 +104,7 @@ namespace _3_GUI_PresentationLayer
             // 
             // txt_ngaygiaohang
             // 
-            this.txt_ngaygiaohang.Location = new System.Drawing.Point(1118, 89);
+            this.txt_ngaygiaohang.Location = new System.Drawing.Point(1118, 96);
             this.txt_ngaygiaohang.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_ngaygiaohang.Name = "txt_ngaygiaohang";
             this.txt_ngaygiaohang.Size = new System.Drawing.Size(189, 27);

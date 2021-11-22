@@ -33,14 +33,17 @@ namespace _1_DAL_DataAccessLayer.DALServices
         public void AddCTHD(Chitiethoadon chitiethoadon)
         {
             databaseContext.Chitiethoadons.Add(chitiethoadon);
+            databaseContext.SaveChanges();
         }
         public void UpdateCTHD(Chitiethoadon chitiethoadon)
         {
             databaseContext.Chitiethoadons.Update(chitiethoadon);
+            databaseContext.SaveChanges();
         }
         public void DeleteCTHD(Chitiethoadon chitiethoadon)
         {
             databaseContext.Chitiethoadons.Remove(chitiethoadon);
+            databaseContext.SaveChanges();  
         }
 
         public void Save()

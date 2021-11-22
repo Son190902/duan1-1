@@ -39,14 +39,10 @@ namespace _3_GUI_PresentationLayer
             this.txt_makh = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txt_ngaylaphd = new System.Windows.Forms.TextBox();
-            this.txt_diachi = new System.Windows.Forms.TextBox();
             this.txt_manv = new System.Windows.Forms.TextBox();
-            this.txt_tenkh = new System.Windows.Forms.TextBox();
             this.txt_mahd = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -70,7 +66,7 @@ namespace _3_GUI_PresentationLayer
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new System.Drawing.Point(879, 33);
+            label8.Location = new System.Drawing.Point(550, 28);
             label8.Name = "label8";
             label8.Size = new System.Drawing.Size(126, 28);
             label8.TabIndex = 16;
@@ -79,7 +75,7 @@ namespace _3_GUI_PresentationLayer
             // label10
             // 
             label10.AutoSize = true;
-            label10.Location = new System.Drawing.Point(879, 112);
+            label10.Location = new System.Drawing.Point(142, 135);
             label10.Name = "label10";
             label10.Size = new System.Drawing.Size(105, 28);
             label10.TabIndex = 18;
@@ -96,14 +92,10 @@ namespace _3_GUI_PresentationLayer
             this.txtTimKiem.Controls.Add(this.txt_makh);
             this.txtTimKiem.Controls.Add(this.label9);
             this.txtTimKiem.Controls.Add(this.txt_ngaylaphd);
-            this.txtTimKiem.Controls.Add(this.txt_diachi);
             this.txtTimKiem.Controls.Add(this.txt_manv);
-            this.txtTimKiem.Controls.Add(this.txt_tenkh);
             this.txtTimKiem.Controls.Add(this.txt_mahd);
             this.txtTimKiem.Controls.Add(this.label7);
-            this.txtTimKiem.Controls.Add(this.label6);
             this.txtTimKiem.Controls.Add(this.label5);
-            this.txtTimKiem.Controls.Add(this.label4);
             this.txtTimKiem.Controls.Add(this.label3);
             this.txtTimKiem.Controls.Add(this.label2);
             this.txtTimKiem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -119,7 +111,7 @@ namespace _3_GUI_PresentationLayer
             // chk_hethang
             // 
             this.chk_hethang.AutoSize = true;
-            this.chk_hethang.Location = new System.Drawing.Point(1017, 152);
+            this.chk_hethang.Location = new System.Drawing.Point(424, 145);
             this.chk_hethang.Name = "chk_hethang";
             this.chk_hethang.Size = new System.Drawing.Size(113, 32);
             this.chk_hethang.TabIndex = 47;
@@ -130,7 +122,7 @@ namespace _3_GUI_PresentationLayer
             // chk_conhang
             // 
             this.chk_conhang.AutoSize = true;
-            this.chk_conhang.Location = new System.Drawing.Point(1017, 109);
+            this.chk_conhang.Location = new System.Drawing.Point(301, 145);
             this.chk_conhang.Name = "chk_conhang";
             this.chk_conhang.Size = new System.Drawing.Size(117, 32);
             this.chk_conhang.TabIndex = 46;
@@ -140,7 +132,7 @@ namespace _3_GUI_PresentationLayer
             // 
             // txt_tiendatcoc
             // 
-            this.txt_tiendatcoc.Location = new System.Drawing.Point(1032, 23);
+            this.txt_tiendatcoc.Location = new System.Drawing.Point(745, 23);
             this.txt_tiendatcoc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_tiendatcoc.Name = "txt_tiendatcoc";
             this.txt_tiendatcoc.Size = new System.Drawing.Size(189, 34);
@@ -148,7 +140,7 @@ namespace _3_GUI_PresentationLayer
             // 
             // dttimepicker_ngaynhanhang
             // 
-            this.dttimepicker_ngaynhanhang.Location = new System.Drawing.Point(1382, 77);
+            this.dttimepicker_ngaynhanhang.Location = new System.Drawing.Point(1252, 28);
             this.dttimepicker_ngaynhanhang.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dttimepicker_ngaynhanhang.Name = "dttimepicker_ngaynhanhang";
             this.dttimepicker_ngaynhanhang.Size = new System.Drawing.Size(285, 34);
@@ -156,7 +148,7 @@ namespace _3_GUI_PresentationLayer
             // 
             // txt_makh
             // 
-            this.txt_makh.Location = new System.Drawing.Point(664, 77);
+            this.txt_makh.Location = new System.Drawing.Point(745, 85);
             this.txt_makh.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_makh.Name = "txt_makh";
             this.txt_makh.Size = new System.Drawing.Size(189, 34);
@@ -165,7 +157,7 @@ namespace _3_GUI_PresentationLayer
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(506, 88);
+            this.label9.Location = new System.Drawing.Point(550, 88);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(154, 28);
             this.label9.TabIndex = 13;
@@ -173,19 +165,12 @@ namespace _3_GUI_PresentationLayer
             // 
             // txt_ngaylaphd
             // 
-            this.txt_ngaylaphd.Location = new System.Drawing.Point(1382, 136);
+            this.txt_ngaylaphd.Location = new System.Drawing.Point(1252, 88);
             this.txt_ngaylaphd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_ngaylaphd.Name = "txt_ngaylaphd";
             this.txt_ngaylaphd.Size = new System.Drawing.Size(285, 34);
             this.txt_ngaylaphd.TabIndex = 11;
-            // 
-            // txt_diachi
-            // 
-            this.txt_diachi.Location = new System.Drawing.Point(301, 137);
-            this.txt_diachi.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txt_diachi.Name = "txt_diachi";
-            this.txt_diachi.Size = new System.Drawing.Size(552, 34);
-            this.txt_diachi.TabIndex = 9;
+            this.txt_ngaylaphd.TextChanged += new System.EventHandler(this.txt_ngaylaphd_TextChanged);
             // 
             // txt_manv
             // 
@@ -194,14 +179,6 @@ namespace _3_GUI_PresentationLayer
             this.txt_manv.Name = "txt_manv";
             this.txt_manv.Size = new System.Drawing.Size(187, 34);
             this.txt_manv.TabIndex = 9;
-            // 
-            // txt_tenkh
-            // 
-            this.txt_tenkh.Location = new System.Drawing.Point(664, 23);
-            this.txt_tenkh.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txt_tenkh.Name = "txt_tenkh";
-            this.txt_tenkh.Size = new System.Drawing.Size(187, 34);
-            this.txt_tenkh.TabIndex = 9;
             // 
             // txt_mahd
             // 
@@ -214,39 +191,21 @@ namespace _3_GUI_PresentationLayer
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(1199, 140);
+            this.label7.Location = new System.Drawing.Point(1067, 88);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(182, 28);
             this.label7.TabIndex = 5;
             this.label7.Text = "Ngày Lập Hóa Đơn:";
             this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(142, 140);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(78, 28);
-            this.label6.TabIndex = 4;
-            this.label6.Text = "Địa Chỉ:";
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(1199, 88);
+            this.label5.Location = new System.Drawing.Point(1067, 29);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(167, 28);
             this.label5.TabIndex = 3;
             this.label5.Text = "Ngày Nhận Hàng:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(506, 33);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(155, 28);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Tên Khách Hàng:";
             // 
             // label3
             // 
@@ -428,9 +387,7 @@ namespace _3_GUI_PresentationLayer
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView dgrv_dsphieunhap;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txt_ngaylaphd;
@@ -441,8 +398,6 @@ namespace _3_GUI_PresentationLayer
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.RadioButton chk_hethang;
         private System.Windows.Forms.RadioButton chk_conhang;
-        private System.Windows.Forms.TextBox txt_diachi;
         private System.Windows.Forms.TextBox txt_manv;
-        private System.Windows.Forms.TextBox txt_tenkh;
     }
 }

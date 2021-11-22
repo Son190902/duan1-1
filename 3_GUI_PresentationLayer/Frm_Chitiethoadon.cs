@@ -13,7 +13,6 @@ using _2_BUS_BusinessLayer.Services;
 
 namespace _3_GUI_PresentationLayer
 {
-    //
     public partial class Frm_Chitiethoadon : Form
     {
         private IBUSchitiethoadon _BUSchitiethoadon;
@@ -138,7 +137,6 @@ namespace _3_GUI_PresentationLayer
             }
             else
             {
-
                 cbx_hd.Checked = false;
                 cbx_khd.Checked = true;
             }
