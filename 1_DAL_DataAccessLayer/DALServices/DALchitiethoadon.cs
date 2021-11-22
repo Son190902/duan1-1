@@ -34,16 +34,19 @@ namespace _1_DAL_DataAccessLayer.DALServices
         {
             databaseContext.Chitiethoadons.Add(chitiethoadon);
             databaseContext.SaveChanges();
+            getListCTHD();
         }
         public void UpdateCTHD(Chitiethoadon chitiethoadon)
         {
             databaseContext.Chitiethoadons.Update(chitiethoadon);
             databaseContext.SaveChanges();
+            getListCTHD();
         }
         public void DeleteCTHD(Chitiethoadon chitiethoadon)
         {
             databaseContext.Chitiethoadons.Remove(chitiethoadon);
-            databaseContext.SaveChanges();  
+            databaseContext.SaveChanges();
+            getListCTHD();
         }
 
         public void Save()

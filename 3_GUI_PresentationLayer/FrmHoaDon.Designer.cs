@@ -38,10 +38,8 @@ namespace _3_GUI_PresentationLayer
             this.dttimepicker_ngaynhanhang = new System.Windows.Forms.DateTimePicker();
             this.txt_makh = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.txt_ngaylaphd = new System.Windows.Forms.TextBox();
             this.txt_manv = new System.Windows.Forms.TextBox();
             this.txt_mahd = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -91,10 +89,8 @@ namespace _3_GUI_PresentationLayer
             this.txtTimKiem.Controls.Add(this.dttimepicker_ngaynhanhang);
             this.txtTimKiem.Controls.Add(this.txt_makh);
             this.txtTimKiem.Controls.Add(this.label9);
-            this.txtTimKiem.Controls.Add(this.txt_ngaylaphd);
             this.txtTimKiem.Controls.Add(this.txt_manv);
             this.txtTimKiem.Controls.Add(this.txt_mahd);
-            this.txtTimKiem.Controls.Add(this.label7);
             this.txtTimKiem.Controls.Add(this.label5);
             this.txtTimKiem.Controls.Add(this.label3);
             this.txtTimKiem.Controls.Add(this.label2);
@@ -163,15 +159,6 @@ namespace _3_GUI_PresentationLayer
             this.label9.TabIndex = 13;
             this.label9.Text = "Mã Khách Hàng:";
             // 
-            // txt_ngaylaphd
-            // 
-            this.txt_ngaylaphd.Location = new System.Drawing.Point(1252, 88);
-            this.txt_ngaylaphd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txt_ngaylaphd.Name = "txt_ngaylaphd";
-            this.txt_ngaylaphd.Size = new System.Drawing.Size(285, 34);
-            this.txt_ngaylaphd.TabIndex = 11;
-            this.txt_ngaylaphd.TextChanged += new System.EventHandler(this.txt_ngaylaphd_TextChanged);
-            // 
             // txt_manv
             // 
             this.txt_manv.Location = new System.Drawing.Point(301, 82);
@@ -188,24 +175,14 @@ namespace _3_GUI_PresentationLayer
             this.txt_mahd.Size = new System.Drawing.Size(187, 34);
             this.txt_mahd.TabIndex = 9;
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(1067, 88);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(182, 28);
-            this.label7.TabIndex = 5;
-            this.label7.Text = "Ngày Lập Hóa Đơn:";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(1067, 29);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(167, 28);
+            this.label5.Size = new System.Drawing.Size(151, 28);
             this.label5.TabIndex = 3;
-            this.label5.Text = "Ngày Nhận Hàng:";
+            this.label5.Text = "Ngày Đặt Hàng:";
             // 
             // label3
             // 
@@ -386,11 +363,9 @@ namespace _3_GUI_PresentationLayer
         private System.Windows.Forms.Button btnDong;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView dgrv_dsphieunhap;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txt_ngaylaphd;
         private System.Windows.Forms.TextBox txt_mahd;
         private System.Windows.Forms.TextBox txt_tiendatcoc;
         private System.Windows.Forms.DateTimePicker dttimepicker_ngaynhanhang;

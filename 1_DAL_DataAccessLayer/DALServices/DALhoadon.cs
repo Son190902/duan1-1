@@ -35,20 +35,26 @@ namespace _1_DAL_DataAccessLayer.DALServices
         public void AddHD(Hoadon hoadon)
         {
             databaseContext.Hoadons.Add(hoadon);
+            
             databaseContext.SaveChanges();
+            getlstfromdb();
         }
 
         public void DeleteHD(Hoadon hoadon)
         {
             databaseContext.Hoadons.Remove(hoadon);
+            
             databaseContext.SaveChanges();
+            getlstfromdb();
 
         }
 
         public void UpdateHD(Hoadon hoadon)
         {
             databaseContext.Hoadons.Update(hoadon);
+           
             databaseContext.SaveChanges();
+            getlstfromdb();
 
         }
 

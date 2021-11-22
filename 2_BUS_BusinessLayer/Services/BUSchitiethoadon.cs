@@ -34,9 +34,9 @@ namespace _2_BUS_BusinessLayer.Services
             chitiethoadon.Soluong = Convert.ToInt32(soluong);
             chitiethoadon.Dongia = Convert.ToDecimal(dongia);
             chitiethoadon.Ngaygiaohang = Convert.ToDateTime(ngaygiaohang);
-            chitiethoadon.Tongtienthanhtoan = Convert.ToDecimal(tongtienthanhtoan);
+            chitiethoadon.Tongtienthanhtoan = Convert.ToDecimal(dongia) * Convert.ToInt32(soluong);
             chitiethoadon.Trangthai = trangthai;
-
+            daLchitiethoadon.AddCTHD(chitiethoadon);
             return " thanh cong";
         }
 

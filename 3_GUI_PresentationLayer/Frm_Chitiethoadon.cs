@@ -40,7 +40,7 @@ namespace _3_GUI_PresentationLayer
             foreach (var x in _BUSchitiethoadon.getlistCTHD())
             {
                 dgrv_cthd.Rows.Add(x.MaCtdh, x.Mahoadon, x.Mactsanpham, x.Madichvu, x.Soluong, x.Dongia, x.Ngaygiaohang,
-                    x.Tongtienthanhtoan, x.Trangthai);
+                    x.Dongia*x.Soluong, x.Trangthai);
             }
             
         }
@@ -59,21 +59,21 @@ namespace _3_GUI_PresentationLayer
             chitiethoadon.Madichvu = txt_madv.Text;
             chitiethoadon.Soluong = Convert.ToInt32(txt_soluong.Text);
             chitiethoadon.Dongia = Convert.ToDecimal(txt_dongia.Text);
-            chitiethoadon.Ngaygiaohang = Convert.ToDateTime(txt_ngaygiaohang.Text);
-            chitiethoadon.Tongtienthanhtoan =Convert.ToDecimal(txt_tongtienthanhtoan.Text);
+            chitiethoadon.Ngaygiaohang = Convert.ToDateTime(dateTimePicker1.Text);
+            chitiethoadon.Tongtienthanhtoan = decimal.Parse(txt_dongia.Text)*int.Parse(txt_soluong.Text);
             if (chitiethoadon.Trangthai == " hoat dong")
             {
-                cbx_hd.Checked = true;
+                rbt_hd.Checked = true;
             }
 
             if (chitiethoadon.Trangthai == " khong hoat dong")
             {
-                cbx_khd.Checked = true;
+                rbt_khd.Checked = true;
             }
 
             _BUSchitiethoadon.AddCTHD(chitiethoadon, txt_machitiethd.Text, txt_mahd.Text, txt_machitietsp.Text,
-                txt_madv.Text, txt_soluong.Text, txt_dongia.Text, txt_ngaygiaohang.Text, txt_tongtienthanhtoan.Text,
-                cbx_hd.Checked.ToString());
+                txt_madv.Text, txt_soluong.Text, txt_dongia.Text, dateTimePicker1.Text, txt_tongtienthanhtoan.Text,
+                rbt_hd.Checked.ToString());
             MessageBox.Show("them thanh cong", "thong bao");
             _BUSchitiethoadon.getlistCTHD();
 
@@ -83,35 +83,38 @@ namespace _3_GUI_PresentationLayer
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            var chitiethoadon = _BUSchitiethoadon.getlistCTHD().Where(c => c.MaCtdh == txt_machitiethd.Text)
+            Chitiethoadon chitiethoadon = new Chitiethoadon();
+            chitiethoadon = _BUSchitiethoadon.getlistCTHD().Where(c => c.MaCtdh == txt_machitiethd.Text)
                 .FirstOrDefault();
-            _BUSchitiethoadon.DeleteCTHD(chitiethoadon);
+            _BUSchitiethoadon.DeleteHD(chitiethoadon);
             MessageBox.Show("xoa thanh cong", "thong bao");
             _BUSchitiethoadon.getlistCTHD();
+            loadData();
         }
 
         private void btnSua_Click(object sender, EventArgs e)
         {
             Chitiethoadon chitiethoadon = new Chitiethoadon();
+            chitiethoadon = _BUSchitiethoadon.getlistCTHD().Where(c => c.MaCtdh == txt_machitiethd.Text).FirstOrDefault();
             chitiethoadon.MaCtdh = txt_machitiethd.Text;
             chitiethoadon.Mahoadon = txt_mahd.Text;
             chitiethoadon.Mactsanpham = txt_machitietsp.Text;
             chitiethoadon.Madichvu = txt_madv.Text;
             chitiethoadon.Soluong = Convert.ToInt32(txt_soluong.Text);
             chitiethoadon.Dongia = Convert.ToDecimal(txt_dongia.Text);
-            chitiethoadon.Ngaygiaohang = Convert.ToDateTime(txt_ngaygiaohang.Text);
-            chitiethoadon.Tongtienthanhtoan = Convert.ToDecimal(txt_tongtienthanhtoan.Text);
+            chitiethoadon.Ngaygiaohang = Convert.ToDateTime(dateTimePicker1.Text);
+           // chitiethoadon.Tongtienthanhtoan = Convert.ToDecimal(txt_tongtienthanhtoan.Text);
             if (chitiethoadon.Trangthai == " hoat dong")
             {
-                cbx_hd.Checked = true;
+                rbt_hd.Checked = true;
             }
 
             if (chitiethoadon.Trangthai == " khong hoat dong")
             {
-                cbx_khd.Checked = true;
+                rbt_khd.Checked = true;
             }
 
-            _BUSchitiethoadon.UpdateCTHD(chitiethoadon);
+            _BUSchitiethoadon.UpdateHD(chitiethoadon);
             MessageBox.Show("sua thanh cong", "thong bao");
             _BUSchitiethoadon.getlistCTHD();
 
@@ -120,26 +123,7 @@ namespace _3_GUI_PresentationLayer
 
         private void dgrv_cthd_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            int i = e.RowIndex;
-            if( i == _BUSchitiethoadon.getlistCTHD().Count) return;
-            txt_machitiethd.Text = dgrv_cthd.Rows[i].Cells[0].Value.ToString();
-            txt_mahd.Text = dgrv_cthd.Rows[i].Cells[1].Value.ToString();
-            txt_machitietsp.Text = dgrv_cthd.Rows[i].Cells[2].Value.ToString();
-            txt_madv.Text = dgrv_cthd.Rows[i].Cells[3].Value.ToString();
-            txt_soluong.Text = dgrv_cthd.Rows[i].Cells[4].Value.ToString();
-            txt_dongia.Text = dgrv_cthd.Rows[i].Cells[5].Value.ToString();
-            txt_ngaygiaohang.Text = dgrv_cthd.Rows[i].Cells[6].Value.ToString();
-            txt_tongtienthanhtoan.Text = dgrv_cthd.Rows[i].Cells[7].Value.ToString();
-            if (dgrv_cthd.Rows[i].Cells[5].Value.ToString() == "con hang")
-            {
-                cbx_hd.Checked = true;
-                cbx_khd.Checked = false;
-            }
-            else
-            {
-                cbx_hd.Checked = false;
-                cbx_khd.Checked = true;
-            }
+           
 
         }
 
@@ -158,6 +142,30 @@ namespace _3_GUI_PresentationLayer
         private void btnDong_Click_1(object sender, EventArgs e)
         {
             MessageBox.Show("dong thanh cong", "thong bao");
+        }
+
+        private void dgrv_cthd_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int i = e.RowIndex;
+            if (i == _BUSchitiethoadon.getlistCTHD().Count) return;
+            txt_machitiethd.Text = dgrv_cthd.Rows[i].Cells[0].Value.ToString();
+            txt_mahd.Text = dgrv_cthd.Rows[i].Cells[1].Value.ToString();
+            txt_machitietsp.Text = dgrv_cthd.Rows[i].Cells[2].Value.ToString();
+            txt_madv.Text = dgrv_cthd.Rows[i].Cells[3].Value.ToString();
+            txt_soluong.Text = dgrv_cthd.Rows[i].Cells[4].Value.ToString();
+            txt_dongia.Text = dgrv_cthd.Rows[i].Cells[5].Value.ToString();
+            dateTimePicker1.Text = dgrv_cthd.Rows[i].Cells[6].Value.ToString();
+            txt_tongtienthanhtoan.Text = dgrv_cthd.Rows[i].Cells[7].Value.ToString();
+            if (dgrv_cthd.Rows[i].Cells[5].Value.ToString() == "con hang")
+            {
+                rbt_hd.Checked = true;
+                rbt_khd.Checked = false;
+            }
+            else
+            {
+                rbt_hd.Checked = false;
+                rbt_khd.Checked = true;
+            }
         }
     }
 }

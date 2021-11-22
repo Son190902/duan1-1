@@ -15,8 +15,8 @@ namespace _2_BUS_BusinessLayer.IServices
         public string AddCTHD(Chitiethoadon chitiethoadon, string maCTHD, string mahoadon, string mactsanpham,
             string madichvu, string soluong, string dongia, string ngaygiaohang, string tongtienthanhtoan, string trangthai);
 
-        string DeleteCTHD(Chitiethoadon chitiethoadon);
-        string UpdateCTHD(Chitiethoadon chitiethoadon); 
+        string DeleteHD(Chitiethoadon chitiethoadon);
+        string UpdateHD(Chitiethoadon chitiethoadon);
         void Save();
         //List<ViewModels> getViewModelsList();
 

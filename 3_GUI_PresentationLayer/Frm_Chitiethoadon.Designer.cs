@@ -31,9 +31,8 @@ namespace _3_GUI_PresentationLayer
         {
             System.Windows.Forms.Label label10;
             this.label1 = new System.Windows.Forms.Label();
-            this.cbx_khd = new System.Windows.Forms.RadioButton();
-            this.cbx_hd = new System.Windows.Forms.RadioButton();
-            this.txt_ngaygiaohang = new System.Windows.Forms.TextBox();
+            this.rbt_khd = new System.Windows.Forms.RadioButton();
+            this.rbt_hd = new System.Windows.Forms.RadioButton();
             this.txt_dongia = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txt_tongtienthanhtoan = new System.Windows.Forms.TextBox();
@@ -56,6 +55,7 @@ namespace _3_GUI_PresentationLayer
             this.btnLuu = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.txt_machitiethd = new System.Windows.Forms.TextBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgrv_cthd)).BeginInit();
             this.SuspendLayout();
@@ -80,35 +80,27 @@ namespace _3_GUI_PresentationLayer
             this.label1.TabIndex = 6;
             this.label1.Text = "Chi Tiết Hóa Đơn";
             // 
-            // cbx_khd
+            // rbt_khd
             // 
-            this.cbx_khd.AutoSize = true;
-            this.cbx_khd.Location = new System.Drawing.Point(628, 251);
-            this.cbx_khd.Name = "cbx_khd";
-            this.cbx_khd.Size = new System.Drawing.Size(149, 24);
-            this.cbx_khd.TabIndex = 66;
-            this.cbx_khd.TabStop = true;
-            this.cbx_khd.Text = "Không Hoạt động";
-            this.cbx_khd.UseVisualStyleBackColor = true;
+            this.rbt_khd.AutoSize = true;
+            this.rbt_khd.Location = new System.Drawing.Point(628, 251);
+            this.rbt_khd.Name = "rbt_khd";
+            this.rbt_khd.Size = new System.Drawing.Size(149, 24);
+            this.rbt_khd.TabIndex = 66;
+            this.rbt_khd.TabStop = true;
+            this.rbt_khd.Text = "Không Hoạt động";
+            this.rbt_khd.UseVisualStyleBackColor = true;
             // 
-            // cbx_hd
+            // rbt_hd
             // 
-            this.cbx_hd.AutoSize = true;
-            this.cbx_hd.Location = new System.Drawing.Point(628, 221);
-            this.cbx_hd.Name = "cbx_hd";
-            this.cbx_hd.Size = new System.Drawing.Size(102, 24);
-            this.cbx_hd.TabIndex = 65;
-            this.cbx_hd.TabStop = true;
-            this.cbx_hd.Text = "Hoạt động";
-            this.cbx_hd.UseVisualStyleBackColor = true;
-            // 
-            // txt_ngaygiaohang
-            // 
-            this.txt_ngaygiaohang.Location = new System.Drawing.Point(1118, 96);
-            this.txt_ngaygiaohang.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txt_ngaygiaohang.Name = "txt_ngaygiaohang";
-            this.txt_ngaygiaohang.Size = new System.Drawing.Size(189, 27);
-            this.txt_ngaygiaohang.TabIndex = 63;
+            this.rbt_hd.AutoSize = true;
+            this.rbt_hd.Location = new System.Drawing.Point(628, 221);
+            this.rbt_hd.Name = "rbt_hd";
+            this.rbt_hd.Size = new System.Drawing.Size(102, 24);
+            this.rbt_hd.TabIndex = 65;
+            this.rbt_hd.TabStop = true;
+            this.rbt_hd.Text = "Hoạt động";
+            this.rbt_hd.UseVisualStyleBackColor = true;
             // 
             // txt_dongia
             // 
@@ -138,7 +130,7 @@ namespace _3_GUI_PresentationLayer
             // 
             // txt_madv
             // 
-            this.txt_madv.Location = new System.Drawing.Point(630, 187);
+            this.txt_madv.Location = new System.Drawing.Point(628, 194);
             this.txt_madv.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_madv.Name = "txt_madv";
             this.txt_madv.Size = new System.Drawing.Size(187, 27);
@@ -233,6 +225,7 @@ namespace _3_GUI_PresentationLayer
             this.dgrv_cthd.RowTemplate.Height = 29;
             this.dgrv_cthd.Size = new System.Drawing.Size(1329, 298);
             this.dgrv_cthd.TabIndex = 67;
+            this.dgrv_cthd.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgrv_cthd_CellClick);
             this.dgrv_cthd.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgrv_cthd_CellContentClick);
             // 
             // btnThem
@@ -324,11 +317,20 @@ namespace _3_GUI_PresentationLayer
             this.txt_machitiethd.Size = new System.Drawing.Size(187, 27);
             this.txt_machitiethd.TabIndex = 54;
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker1.Location = new System.Drawing.Point(1118, 96);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(185, 27);
+            this.dateTimePicker1.TabIndex = 74;
+            // 
             // Frm_Chitiethoadon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1487, 724);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.btnDong);
             this.Controls.Add(this.btnBoQua);
@@ -336,10 +338,9 @@ namespace _3_GUI_PresentationLayer
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.dgrv_cthd);
-            this.Controls.Add(this.cbx_khd);
-            this.Controls.Add(this.cbx_hd);
+            this.Controls.Add(this.rbt_khd);
+            this.Controls.Add(this.rbt_hd);
             this.Controls.Add(label10);
-            this.Controls.Add(this.txt_ngaygiaohang);
             this.Controls.Add(this.txt_dongia);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
@@ -366,9 +367,8 @@ namespace _3_GUI_PresentationLayer
 
         #endregion
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.RadioButton cbx_khd;
-        private System.Windows.Forms.RadioButton cbx_hd;
-        private System.Windows.Forms.TextBox txt_ngaygiaohang;
+        private System.Windows.Forms.RadioButton rbt_khd;
+        private System.Windows.Forms.RadioButton rbt_hd;
         private System.Windows.Forms.TextBox txt_dongia;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txt_tongtienthanhtoan;
@@ -391,5 +391,6 @@ namespace _3_GUI_PresentationLayer
         private System.Windows.Forms.Button btnLuu;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txt_machitiethd;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }

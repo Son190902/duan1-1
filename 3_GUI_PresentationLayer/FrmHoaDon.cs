@@ -56,7 +56,7 @@ namespace _3_GUI_PresentationLayer
             hoadon.Mahoadon = txt_mahd.Text;
             hoadon.Makhach = txt_makh.Text;
             hoadon.Manhanvien = txt_manv.Text;
-            hoadon.Ngaydathang = Convert.ToDateTime(txt_ngaylaphd.Text);
+            hoadon.Ngaydathang = Convert.ToDateTime(dttimepicker_ngaynhanhang.Text);
             hoadon.Tiendatcoc = Convert.ToDecimal(txt_tiendatcoc.Text);
             if (hoadon.Trangthai == "con hang")
             {
@@ -68,7 +68,7 @@ namespace _3_GUI_PresentationLayer
                 chk_hethang.Checked = true;
             }
             
-            _BUShoadon.AddHD(hoadon,txt_mahd.Text,txt_makh.Text,txt_manv.Text,txt_ngaylaphd.Text,txt_tiendatcoc.Text,chk_conhang.Checked.ToString());
+            _BUShoadon.AddHD(hoadon,txt_mahd.Text,txt_makh.Text,txt_manv.Text, dttimepicker_ngaynhanhang.Text,txt_tiendatcoc.Text,chk_conhang.Checked.ToString());
            
             MessageBox.Show("them thanh cong", "thong bao");           
             dALhoadon.getlstfromdb();
@@ -82,8 +82,8 @@ namespace _3_GUI_PresentationLayer
             // idhoadon = dgrv_dsphieunhap.Rows[i].Cells[0].Value.ToString();
             txt_mahd.Text = dgrv_dsphieunhap.Rows[i].Cells[0].Value.ToString();
             txt_makh.Text = dgrv_dsphieunhap.Rows[i].Cells[1].Value.ToString(); 
-            txt_manv.Text = dgrv_dsphieunhap.Rows[i].Cells[2].Value.ToString(); 
-            txt_ngaylaphd.Text = dgrv_dsphieunhap.Rows[i].Cells[3].Value.ToString(); 
+            txt_manv.Text = dgrv_dsphieunhap.Rows[i].Cells[2].Value.ToString();
+            dttimepicker_ngaynhanhang.Text =  dgrv_dsphieunhap.Rows[i].Cells[3].Value.ToString(); 
             txt_tiendatcoc.Text = dgrv_dsphieunhap.Rows[i].Cells[4].Value.ToString();
             if (dgrv_dsphieunhap.Rows[i].Cells[5].Value.ToString() == "con hang")
             {
@@ -106,6 +106,7 @@ namespace _3_GUI_PresentationLayer
             _BUShoadon.DeleteHD(hoadon); 
             MessageBox.Show(" xoa thanh cong", " thong bao");
             _BUShoadon.getlistHD();
+            loadData();
         }
 
         private void btnSua_Click(object sender, EventArgs e)
@@ -114,7 +115,7 @@ namespace _3_GUI_PresentationLayer
             hoadon.Mahoadon = txt_mahd.Text;
             hoadon.Makhach = txt_makh.Text;
             hoadon.Manhanvien = txt_manv.Text;
-            hoadon.Ngaydathang = Convert.ToDateTime(txt_ngaylaphd.Text);
+            hoadon.Ngaydathang = Convert.ToDateTime(dttimepicker_ngaynhanhang.Text);
             hoadon.Tiendatcoc = Convert.ToDecimal(txt_tiendatcoc.Text);
             if (chk_conhang.Checked == true)
             {
